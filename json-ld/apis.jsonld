@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "api": "https://schema.org/WebAPI",
+    "aid": "https://apis.io/aid"
+  },
+  "@type": "WebAPI",
+  "@id": "https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/apis.yml",
+  "aid:id": "healthdata",
+  "name": "HealthData.gov SODA API",
+  "description": "The Socrata Open Data API (SODA) provides programmatic access to all public datasets hosted on HealthData.gov. Each dataset is accessible through a unique eight-character identifier inserted into the REST endpoint. Queries are expressed using SoQL (Socrata Query Language), a SQL-like syntax that supports filtering, sorting, aggregation, and pagination. Datasets span Medicare inpatient and outpatient claims, hospital compare quality scores, state drug utilization data, community health indicators, and thousands of additional HHS datasets.",
+  "url": "https://healthdata.gov",
+  "documentation": "https://dev.socrata.com/consumers/getting-started.html",
+  "termsOfService": "https://healthdata.gov/terms-of-service",
+  "provider": {
+    "@type": "Organization",
+    "name": "U.S. Department of Health and Human Services",
+    "url": "https://www.hhs.gov",
+    "sameAs": [
+      "https://healthdata.gov",
+      "https://github.com/HHS/healthdata.gov"
+    ]
+  },
+  "potentialAction": [
+    {
+      "@type": "SearchAction",
+      "name": "Query datasets via SoQL",
+      "description": "Use SoQL (Socrata Query Language) to filter, sort, aggregate, and paginate dataset rows via the SODA REST endpoint.",
+      "target": "https://healthdata.gov/resource/{dataset_id}.json?$query={soql_query}"
+    }
+  ],
+  "keywords": [
+    "Health",
+    "Open Data",
+    "Federal Government",
+    "Medicare",
+    "Medicaid",
+    "Hospital Quality",
+    "Drug Utilization",
+    "Public Health",
+    "CDC",
+    "CMS",
+    "FDA",
+    "NIH",
+    "SODA",
+    "Socrata"
+  ],
+  "license": "https://healthdata.gov/terms-of-service",
+  "isAccessibleForFree": true,
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Developers, Researchers, Data Scientists, Public Health Analysts"
+  },
+  "sameAs": [
+    "https://healthdata.gov",
+    "https://dev.socrata.com/consumers/getting-started.html",
+    "https://github.com/HHS/healthdata.gov"
+  ],
+  "dateModified": "2026-06-13"
+}
