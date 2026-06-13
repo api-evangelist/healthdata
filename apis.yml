@@ -1,0 +1,114 @@
+aid: healthdata
+name: HealthData.gov
+description: >
+  HealthData.gov is the U.S. Department of Health and Human Services open data
+  platform providing public access to federal health datasets including Medicare
+  claims, hospital quality ratings, drug utilization data, public health
+  indicators, and data from agencies such as CMS, CDC, FDA, and NIH. The
+  platform is powered by the Socrata Open Data API (SODA) and exposes every
+  dataset through a consistent REST API using SoQL query language, enabling
+  developers to build applications, conduct research, and create data
+  visualizations from authoritative government health data.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+type: Index
+tags:
+  - Health
+  - Open Data
+  - Federal Government
+  - Medicare
+  - Medicaid
+  - Hospital Quality
+  - Drug Utilization
+  - Public Health
+  - CDC
+  - CMS
+  - FDA
+  - NIH
+  - SODA
+  - Socrata
+apis:
+  - name: HealthData.gov SODA API
+    description: >
+      The Socrata Open Data API (SODA) provides programmatic access to all
+      public datasets hosted on HealthData.gov. Each dataset is accessible
+      through a unique eight-character identifier inserted into the REST
+      endpoint. Queries are expressed using SoQL (Socrata Query Language),
+      a SQL-like syntax that supports filtering, sorting, aggregation, and
+      pagination. Datasets span Medicare inpatient and outpatient claims,
+      hospital compare quality scores, state drug utilization data, community
+      health indicators, and thousands of additional HHS datasets. No
+      authentication is required for public datasets; an app token raises the
+      default request quota significantly.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://healthdata.gov
+    baseURL: https://healthdata.gov
+    tags:
+      - Open Data
+      - Health
+      - Medicare
+      - Hospital Quality
+      - Drug Utilization
+      - SODA
+      - Socrata
+    properties:
+      - type: Documentation
+        url: https://dev.socrata.com/consumers/getting-started.html
+      - type: OpenAPI
+        url: https://dev.socrata.com/docs/endpoints.html
+      - type: Authentication
+        url: https://dev.socrata.com/docs/authentication.html
+      - type: AppTokens
+        url: https://dev.socrata.com/docs/app-tokens.html
+      - type: SoQLQueryLanguage
+        url: https://dev.socrata.com/docs/queries/
+      - type: DataCatalog
+        url: https://healthdata.gov/browse
+      - type: GitHubOrganization
+        url: https://github.com/HHS/healthdata.gov
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/rate-limits/rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: HHS Open Data
+        email: ''
+        url: https://www.hhs.gov/web/developer/index.html
+
+common:
+  - type: Portal
+    url: https://healthdata.gov
+  - type: Developer
+    url: https://dev.socrata.com/consumers/getting-started.html
+  - type: Documentation
+    url: https://dev.socrata.com/docs/endpoints.html
+  - type: Authentication
+    url: https://dev.socrata.com/docs/authentication.html
+  - type: AppTokenRegistration
+    url: https://dev.socrata.com/docs/app-tokens.html
+  - type: DataCatalog
+    url: https://healthdata.gov/browse
+  - type: GitHub
+    url: https://github.com/HHS/healthdata.gov
+  - type: TermsOfService
+    url: https://healthdata.gov/terms-of-service
+  - type: PrivacyPolicy
+    url: https://healthdata.gov/privacy-policy
+  - type: AboutPage
+    url: https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/
+  - type: Blog
+    url: https://healthdata.gov/blog
+  - type: HHSDeveloperCenter
+    url: https://www.hhs.gov/web/developer/index.html
+  - type: OpenDataPlan
+    url: https://cdo.hhs.gov/s/open-data
+
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
+    url: https://apievangelist.com

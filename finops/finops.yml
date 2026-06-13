@@ -1,0 +1,51 @@
+finops:
+  model: Free / Open Government Data
+  description: >
+    HealthData.gov is a U.S. federal government open data initiative operated
+    by the Department of Health and Human Services (HHS). All data and API
+    access are provided free of charge with no metered billing, subscription
+    fees, or per-request costs. The platform is funded through federal
+    appropriations. Developers pay only for their own infrastructure (compute,
+    bandwidth) used to consume the API.
+
+  costs:
+    - item: API Access
+      amount: 0.00
+      currency: USD
+      notes: No charge for any tier of API access.
+
+    - item: App Token Registration
+      amount: 0.00
+      currency: USD
+      notes: Free Socrata account required; no credit card needed.
+
+    - item: Data Downloads
+      amount: 0.00
+      currency: USD
+      notes: Bulk CSV/JSON exports are also free and unlimited.
+
+  budgetConsiderations:
+    - consideration: Egress / Bandwidth
+      notes: >
+        Consumer-side network egress from their own cloud environment may incur
+        costs from their cloud provider (AWS, GCP, Azure, etc.) when pulling
+        large datasets. This is unrelated to HealthData.gov pricing.
+
+    - consideration: Rate Limit Compliance
+      notes: >
+        Exceeding anonymous limits results in 429 errors; use a free app token
+        to avoid unplanned interruptions at no additional cost.
+
+    - consideration: SLA / Uptime
+      notes: >
+        As a federal government platform, HealthData.gov does not publish a
+        paid SLA. Planned maintenance windows are announced on the site. Budget
+        for retry logic and caching in dependent applications.
+
+  references:
+    - url: https://healthdata.gov
+      description: Official HealthData.gov platform
+    - url: https://www.hhs.gov/open/index.html
+      description: HHS Open Government page confirming free and open data mandate
+    - url: https://cdo.hhs.gov/s/open-data
+      description: HHS Chief Data Officer open data plan

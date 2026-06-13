@@ -1,0 +1,50 @@
+plans:
+  - name: Anonymous Access
+    description: >
+      Public datasets on HealthData.gov are freely accessible without any
+      account or authentication. Anonymous requests share a common IP-based
+      throttle pool with other unauthenticated callers from the same address,
+      resulting in lower effective request limits. Suitable for exploratory
+      queries and low-volume one-off data pulls.
+    url: https://dev.socrata.com/docs/app-tokens.html
+    price: 0.00
+    currency: USD
+    features:
+      - Access to all public HealthData.gov datasets
+      - SoQL query language support
+      - JSON, CSV, GeoJSON, RDF-XML response formats
+      - Up to 50,000 records per response
+      - Shared IP-based throttle pool
+
+  - name: App Token (Free)
+    description: >
+      Developers who register a free Socrata application token receive a
+      dedicated per-token quota rather than sharing the IP-based pool.
+      Registration requires only a free Socrata account. The platform does
+      not throttle token-bearing requests unless they are determined to be
+      abusive or monopolize shared resources. Recommended for all production
+      applications and research workflows.
+    url: https://dev.socrata.com/docs/app-tokens.html
+    price: 0.00
+    currency: USD
+    features:
+      - All Anonymous Access features
+      - Dedicated per-token request quota
+      - Up to 1,000 requests per rolling hour period (guideline)
+      - X-App-Token header or URL parameter authentication
+      - OAuth 2.0 support for write operations on permissioned datasets
+      - No throttling unless abusive behaviour is detected
+
+  - name: Elevated Access (By Request)
+    description: >
+      Organizations that need sustained high-volume API access beyond the
+      standard app-token quota can contact Socrata / Tyler Technologies
+      support to request elevated limits. Approval and terms are handled
+      case-by-case; there is no published tier pricing for this level.
+    url: https://dev.socrata.com/consumers/getting-started.html
+    price: 0.00
+    currency: USD
+    features:
+      - All App Token features
+      - Custom elevated request quota negotiated with support
+      - Priority assistance for integration questions

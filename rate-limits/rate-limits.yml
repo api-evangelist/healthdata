@@ -1,0 +1,47 @@
+rateLimits:
+  - name: Unauthenticated (No App Token)
+    description: >
+      Requests made without an app token are pooled by IP address. The shared
+      pool is throttled and callers may receive 429 Too Many Requests responses
+      during periods of high IP-level traffic. Exact numeric thresholds are not
+      publicly documented by Socrata but are intentionally low to encourage app
+      token registration.
+    scope: IP address
+    requests: null
+    window: null
+    notes: Shared pool; no published numeric threshold. Use app tokens to avoid.
+
+  - name: App Token (Standard)
+    description: >
+      Requests that include a valid Socrata app token in the X-App-Token
+      header (or as a URL query parameter) receive a per-token allocation.
+      Socrata's published guidance states up to 1,000 requests per rolling
+      hour period as a general guideline, though the platform states it does
+      not actively throttle token-bearing requests unless abuse is detected.
+    scope: App token
+    requests: 1000
+    window: 1 hour (rolling)
+    header: X-App-Token
+    statusOnExceed: 429 Too Many Requests
+    notes: >
+      The 1,000/hour figure is a guideline; legitimate high-volume tokens
+      are generally not throttled. Contact Socrata support for elevated limits.
+
+  - name: Response Pagination
+    description: >
+      A single SODA API response is capped at 50,000 rows regardless of
+      authentication tier. Use the $limit and $offset SoQL parameters to
+      paginate through larger datasets. This is a response-size constraint,
+      not a rate limit, and does not trigger 429 responses.
+    scope: Per request
+    rowsPerResponse: 50000
+    paginationParameters:
+      - $limit
+      - $offset
+    notes: Not a rate limit; applies to all access tiers.
+
+references:
+  - url: https://dev.socrata.com/docs/app-tokens.html
+    description: Socrata App Tokens documentation covering throttling behaviour
+  - url: https://dev.socrata.com/consumers/getting-started.html
+    description: Getting Started guide with rate limit context
