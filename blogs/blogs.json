@@ -6,5 +6,17 @@
   "lastFetched": "2026-06-13",
   "fetchStatus": "unavailable",
   "fetchNote": "healthdata.gov returned HTTP 503 Service Unavailable during pipeline run on 2026-06-13. Blog content could not be retrieved.",
-  "posts": []
+  "posts": [],
+  "repo": "healthdata",
+  "feeds": [
+    {
+      "source": "https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/",
+      "feed_url": "https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-14T20:42:17Z"
 }
