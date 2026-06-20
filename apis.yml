@@ -9,7 +9,7 @@ description: >
   dataset through a consistent REST API using SoQL query language, enabling
   developers to build applications, conduct research, and create data
   visualizations from authoritative government health data.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -43,7 +43,7 @@ apis:
       health indicators, and thousands of additional HHS datasets. No
       authentication is required for public datasets; an app token raises the
       default request quota significantly.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://healthdata.gov
     baseURL: https://healthdata.gov
     tags:
