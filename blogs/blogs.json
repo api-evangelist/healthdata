@@ -1,22 +1,12 @@
 {
-  "aid": "healthdata",
-  "name": "HealthData.gov Blog",
-  "description": "Blog and news updates from HealthData.gov, the U.S. Department of Health and Human Services open data platform.",
-  "url": "https://healthdata.gov/blog",
-  "lastFetched": "2026-06-13",
-  "fetchStatus": "unavailable",
-  "fetchNote": "healthdata.gov returned HTTP 503 Service Unavailable during pipeline run on 2026-06-13. Blog content could not be retrieved.",
-  "posts": [],
   "repo": "healthdata",
   "feeds": [
     {
-      "source": "https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/",
-      "feed_url": "https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/",
-      "title": "",
+      "source": "https://healthdata.gov/blog",
       "saved": 0,
-      "method": "none"
+      "error": "HTTP 404 Not Found; no blog/news section found on healthdata.gov"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T12:45:27Z",
+  "post_count": 0
 }
