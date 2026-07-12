@@ -81,6 +81,8 @@ apis:
         url: https://www.hhs.gov/web/developer/index.html
 
 common:
+  - type: DomainSecurity
+    url: security/healthdata-domain-security.yml
   - type: Portal
     url: https://healthdata.gov
   - type: Developer
