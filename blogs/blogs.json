@@ -2,11 +2,13 @@
   "repo": "healthdata",
   "feeds": [
     {
-      "source": "https://healthdata.gov/blog",
+      "source": "https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/",
+      "feed_url": "https://healthdata.gov/stories/s/About-Healthdata-gov/jw2e-4hhu/",
+      "title": "",
       "saved": 0,
-      "error": "HTTP 404 Not Found; no blog/news section found on healthdata.gov"
+      "method": "none"
     }
   ],
-  "fetched": "2026-06-27T12:45:27Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 0
 }
