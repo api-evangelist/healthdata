@@ -9,7 +9,19 @@ description: >
   dataset through a consistent REST API using SoQL query language, enabling
   developers to build applications, conduct research, and create data
   visualizations from authoritative government health data.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/healthdata.png
 url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
