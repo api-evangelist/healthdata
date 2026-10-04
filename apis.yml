@@ -10,15 +10,16 @@ description: >
   developers to build applications, conduct research, and create data
   visualizations from authoritative government health data.
 deliveryModel:
-  model: saas
-  open_source: false
+  model: unknown
+  open_source: unknown
   commercial: true
   callable_host: false
-  label: Hosted service · you call their endpoint
-  confidence: medium
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
   source:
   - pricing
-  generated: '2026-08-28'
+  - repository-unlicensed
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: free
@@ -41,13 +42,12 @@ type: Index
 tags:
   - Health
   - Open Data
-  - Federal-Government
+  - Federal Government
   - Medicare
   - Medicaid
   - Hospital Quality
   - Drug Utilization
   - Public Health
-  - Change Data Capture
   - CMS
   - FDA
   - NIH
@@ -62,12 +62,12 @@ tags_raw:
   - Hospital Quality
   - Drug Utilization
   - Public Health
-  - CDC
   - CMS
   - FDA
   - NIH
   - SODA
   - Socrata
+  - Federal-Government
 apis:
   - name: HealthData.gov SODA API
     description: >
