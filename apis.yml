@@ -36,7 +36,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/healthdata.png
 url: https://raw.githubusercontent.com/api-evangelist/healthdata/refs/heads/main/apis.yml
 created: '2026-06-13'
-modified: '2026-06-13'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 type: Index
 tags:
@@ -119,6 +119,8 @@ apis:
         url: https://www.hhs.gov/web/developer/index.html
 
 common:
+  - url: https://healthdata.gov/catalog.rss
+    type: BlogRSS
   - type: DomainSecurity
     url: security/healthdata-domain-security.yml
   - type: Portal
