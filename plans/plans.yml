@@ -52,3 +52,28 @@ plans:
       - All App Token features
       - Custom elevated request quota negotiated with support
       - Priority assistance for integration questions
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Anonymous Access
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: App Token (Free)
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Elevated Access (By Request)
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
