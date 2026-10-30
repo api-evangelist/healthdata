@@ -64,71 +64,75 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-HealthData.gov is the U.S. Department of Health and Human Services open data platform providing public access to federal health datasets. The platform hosts data from CMS, CDC, FDA, NIH, and other HHS agencies, covering Medicare claims, hospital quality ratings, drug utilization, public health indicators, and thousands of additional health-related datasets.
+HealthData.gov is the U.S. Department of Health and Human Services open data platform providing public access to federal health datasets including Medicare claims, hospital quality ratings, drug utilization data, public health indicators, and data from agencies such as CMS, CDC, FDA, and NIH. The platform is powered by the Socrata Open Data API (SODA) and exposes every dataset through a consistent REST API using SoQL query language, enabling developers to build applications, conduct research, and create data visualizations from authoritative government health data.
 
-## API Access
+**Areas:** Health · Open Data · Federal Government · Medicare · Medicaid · Hospital Quality · Drug Utilization · Public Health · CMS · FDA · NIH · SODA
 
-Every dataset on HealthData.gov is accessible via the **Socrata Open Data API (SODA)**. Endpoints follow a consistent pattern using an eight-character dataset identifier:
+## HealthData.gov on APIs.io
 
-```
-https://healthdata.gov/api/views/{dataset-id}/rows.json
-https://healthdata.gov/api/v3/views/{dataset-id}/query.json
-```
+Everything profiled for HealthData.gov is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/healthdata/](https://apis.io/providers/healthdata/)** — or go straight to one of the APIs or properties below.
 
-Queries are written in **SoQL (Socrata Query Language)**, a SQL-like syntax supporting `SELECT`, `WHERE`, `ORDER BY`, `GROUP BY`, `LIMIT`, and `OFFSET` clauses.
+### APIs (1)
 
-### Example: State Drug Utilization Data
+- [HealthData.gov SODA API](https://apis.io/apis/healthdata/healthdatagov-soda-api/) — The Socrata Open Data API (SODA) provides programmatic access to all public datasets hosted on HealthData.gov. Each dataset is accessible through a unique…
 
-```
-GET https://healthdata.gov/resource/itpq-ryxs.json?$limit=100&$where=year=2024
-```
+### Published properties
 
-## Authentication
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- **No auth required** for all public datasets
-- **App Token** (free, recommended): Include `X-App-Token: YOUR_TOKEN` header to avoid IP-based throttling
-- **OAuth 2.0**: Required only for write access to permissioned datasets
+#### JSON-LD (1)
 
-Register a free app token at: https://dev.socrata.com/docs/app-tokens.html
+Linked-data contexts for the provider's vocabulary.
 
-## Rate Limits
+- [Apis Context](https://apis.io/jsonld/healthdata/apis/)
 
-| Tier | Limit |
-|------|-------|
-| Anonymous (no token) | Shared IP pool, no published number |
-| App Token (free) | ~1,000 requests/hour (guideline); not actively throttled for legitimate use |
-| Elevated (by request) | Custom, contact Socrata support |
+#### Security (1)
 
-Max rows per response: **50,000** (paginate with `$limit` / `$offset`)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Pricing
+- [Healthdata Domain Security](https://apis.io/security/healthdata/healthdata-domain-security/)
 
-All access is **free**. HealthData.gov is a U.S. federal government open data initiative funded by congressional appropriations.
+#### Plans and pricing (1)
 
-## Key Datasets
+Published plans, tiers and prices.
 
-- Hospital Compare / Care Compare quality data
-- Medicare Inpatient and Outpatient charge data
-- State Drug Utilization Data (Medicaid)
-- Community Health Indicators
-- CDC WONDER public health statistics
-- ClinicalTrials.gov registry data
-- RxNorm / RxNav drug information APIs
+- [Plans](https://apis.io/plans/healthdata/plans/)
 
-## Links
+#### Rate limits (1)
 
-- Portal: https://healthdata.gov
-- Data Catalog: https://healthdata.gov/browse
-- SODA Developer Docs: https://dev.socrata.com/consumers/getting-started.html
-- GitHub (HHS): https://github.com/HHS/healthdata.gov
-- HHS Developer Center: https://www.hhs.gov/web/developer/index.html
-- HHS Open Data Plan: https://cdo.hhs.gov/s/open-data
+Published request limits.
 
-## APIs.json
+- [Rate Limits](https://apis.io/rate-limits/healthdata/rate-limits/)
 
-This repository contains an [APIs.json 0.19](https://apisjson.org) profile for HealthData.gov:
+#### FinOps (1)
 
-- `apis.yml` — primary catalog index
-- `plans/plans.yml` — access tier descriptions
-- `rate-limits/rate-limits.yml` — throttling policies
-- `finops/finops.yml` — cost and budget guidance
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/healthdata/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Documentation](https://dev.socrata.com/docs/endpoints.html)
+- [Blog](https://healthdata.gov/blog)
+- [Terms of service](https://healthdata.gov/terms-of-service)
+- [Privacy policy](https://healthdata.gov/privacy-policy)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HealthData.gov: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/healthdata/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
